@@ -1,5 +1,6 @@
 import { Outlet } from "react-router";
 import Header_client from "../components/header";
+import Footer_client from "../components/footer";
 
 const Layout_client = () => {
   return (
@@ -8,6 +9,7 @@ const Layout_client = () => {
       <>
         <Outlet />
       </>
+      <Footer_client />
     </>
   );
 };

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useLocation, redirect } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import { X, Menu } from "lucide-react";
 
 // JobPortalHeader.jsx with system dark mode (TailwindCSS)
@@ -8,12 +8,13 @@ export default function Header_client({ onSearch } = {}) {
   const [keyword, setKeyword] = useState("");
   const [location, setLocation] = useState("");
   const { pathname } = useLocation();
+  const navigate = useNavigate();
 
   const reload = () => {
     if (pathname === "/") {
       window.location.reload();
     } else {
-      redirect("/");
+      navigate("/");
     }
   };
 
