@@ -27,7 +27,7 @@ export default function FilterBar() {
   };
 
   return (
-    <div className="max-w-6xl mx-auto bg-slate-50 dark:bg-slate-900 py-4 px-6 rounded-lg shadow-sm">
+    <div className="bg-slate-50 dark:bg-slate-900 py-4 px-6 rounded-lg shadow-sm">
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center gap-2">
           <h2 className="text-lg font-semibold text-green-600">Việc làm tốt nhất</h2>

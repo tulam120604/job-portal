@@ -2,7 +2,7 @@ import { Tag } from "lucide-react";
 
 const Topjob = () => {
   return (
-    <div className="max-w-6xl mx-auto mt-5 space-y-4">
+    <div className="mt-5 space-y-4">
       <h2 className="text-lg font-semibold text-green-600">
         Top ngành nghề nổi bật
       </h2>
