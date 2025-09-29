@@ -51,7 +51,7 @@ export default function Banner() {
 
   return (
     <section className="my-5">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 *:h-80">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 *:h-80">
         {/*Danh mục ngành - scroll dọc */}
         <div
           className="bg-white dark:bg-slate-900 rounded-lg shadow text-slate-800 dark:text-slate-100 "

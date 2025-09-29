@@ -1,8 +1,8 @@
-import Boxjob from "../../../components/boxjob";
+import BoxDetailjob from "../../../components/box.detailjob";
 
 const Suggestjob = () => {
   return (
-    <div className="max-w-6xl mx-auto mt-5 space-y-4">
+    <div className="mt-5 space-y-4">
       <h2 className="text-lg font-semibold text-green-600">
         Gợi ý việc làm phù hợp
       </h2>
@@ -11,7 +11,7 @@ const Suggestjob = () => {
         md:grid-cols-2 gap-4 *:rounded-lg *:p-4"
       >
         {Array.from({ length: 10 }).map(() => (
-          <Boxjob />
+          <BoxDetailjob />
         ))}
       </div>
     </div>
