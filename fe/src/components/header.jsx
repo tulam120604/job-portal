@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router";
 import { X, Menu } from "lucide-react";
+import MegaMenu from "./mega.menu";
 
 // JobPortalHeader.jsx with system dark mode (TailwindCSS)
 export default function Header_client({ onSearch } = {}) {
@@ -44,12 +45,12 @@ export default function Header_client({ onSearch } = {}) {
 
             {/* Desktop nav */}
             <nav className="hidden md:flex items-center gap-3 ml-6">
-              <Link
-                to="#"
-                className="px-3 py-2 text-sm rounded-md hover:bg-slate-50 dark:hover:bg-slate-800"
-              >
-                Công việc
-              </Link>
+              <div className="group px-3 py-2 text-sm rounded-md hover:bg-slate-50 dark:hover:bg-slate-800 cursor-pointer">
+                Việc làm
+                <div className="hidden group-hover:block relative">
+                  <MegaMenu />
+                </div>
+              </div>
               <Link
                 to="#"
                 className="px-3 py-2 text-sm rounded-md hover:bg-slate-50 dark:hover:bg-slate-800"
@@ -132,7 +133,10 @@ export default function Header_client({ onSearch } = {}) {
               >
                 Đăng tuyển
               </Link>
-              <Link to="#" className="text-sm px-3 py-2 rounded-md hover:bg-slate-50 dark:hover:bg-slate-800">
+              <Link
+                to="/login"
+                className="text-sm px-3 py-2 rounded-md hover:bg-slate-50 dark:hover:bg-slate-800"
+              >
                 Tài khoản
               </Link>
             </div>
