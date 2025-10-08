@@ -31,9 +31,6 @@ export default function FilterBar() {
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center gap-2">
           <h2 className="text-lg font-semibold text-green-600">Việc làm tốt nhất</h2>
-          <span className="text-xs text-slate-500 dark:text-slate-400">
-            Đề xuất bởi <b>ToppyAI</b>
-          </span>
         </div>
 
         <a href="#" className="text-sm text-green-600 hover:underline">

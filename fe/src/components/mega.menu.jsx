@@ -2,14 +2,15 @@ import { Link } from "react-router";
 
 export default function MegaMenu() {
   return (
-    <div className="absolute -left-3 top-full mt-2 w-[900px] bg-[#1a1f2b] shadow-lg rounded-xl p-6 flex gap-10 text-sm z-50 text-gray-200">
+    <div className="absolute -left-3 top-full mt-2 w-[900px] bg-[#1a1f2b] shadow-lg 
+    rounded-xl p-6 flex gap-10 text-sm z-50 text-gray-200 sideDown">
       {/* Cột 1 */}
       <div className="flex flex-col gap-3 min-w-[180px]">
         <h3 className="font-semibold text-gray-300">VIỆC LÀM</h3>
         <Link to="/savejob" className="flex items-center gap-2 hover:text-green-500">
           <span>🔖</span> Việc làm đã lưu
         </Link>
-        <Link to="#" className="flex items-center gap-2 hover:text-green-500">
+        <Link to="/historyjob" className="flex items-center gap-2 hover:text-green-500">
           <span>📄</span> Việc làm đã ứng tuyển
         </Link>
         <Link to="#" className="flex items-center gap-2 hover:text-green-500">

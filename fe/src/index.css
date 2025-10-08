@@ -1,1 +1,21 @@
 @import "tailwindcss";
+
+*{
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+}
+
+@keyframes sideDowKeyframe {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  } 
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sideDown {
+  animation: sideDowKeyframe 0.5s ease forwards
+}
