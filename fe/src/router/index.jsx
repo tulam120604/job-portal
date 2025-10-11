@@ -1,12 +1,13 @@
 import { Route, Routes } from "react-router";
-import Layout_client from "../layouts/client";
-import Layout_dashboard from "../layouts/dashboard";
-import Home_page from "../pages/client/home";
-import Job_page from "../pages/client/job";
-import Login from "../pages/auth/auth.login";
-import Register from "../pages/auth/auth.register";
-import SaveJobsPage from "../pages/client/saveJobs";
-import HistoryJobsPage from "../pages/client/historyJobs";
+import Layout_client from "@/layouts/client";
+import Layout_dashboard from "@/layouts/dashboard";
+import Home_page from '@/pages/client/home/page.jsx'
+import Job_page from "@/pages/client/job/page.jsx";
+import Login from "@/pages/auth/auth.login";
+import Register from "@/pages/auth/auth.register";
+import SaveJobsPage from "@/pages/client/saveJobs/page.jsx";
+import HistoryJobsPage from "@/pages/client/historyJobs/page.jsx";
+import TemplateCv_page from "../pages/client/Cv_template/page";
 
 const Router = () => {
   return (
@@ -18,6 +19,7 @@ const Router = () => {
           <Route path="/job" element={<Job_page />} />
           <Route path="/savejob" element={<SaveJobsPage />} />
           <Route path="/historyjob" element={<HistoryJobsPage />} />
+          <Route path="/cv/template" element={<TemplateCv_page/>}/>
 
           {/* auth */}
           <Route path="/login" element={<Login />} />

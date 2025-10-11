@@ -52,7 +52,7 @@ export default function Header_client({ onSearch } = {}) {
                 </div>
               </div>
               <Link
-                to="#"
+                to="/cv/template"
                 className="px-3 py-2 text-sm rounded-md hover:bg-slate-50 dark:hover:bg-slate-800"
               >
                 Tạo CV
