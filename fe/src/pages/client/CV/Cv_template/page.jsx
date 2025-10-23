@@ -4,7 +4,7 @@ import CvGuide from './cv.guide'
 
 const TemplateCv_page = () => {
   return (
-    <div className="max-w-6xl mx-auto my-5">
+    <div className="my-5">
       <CvTemplateMenu/>
       <CvTemplateList/>
       <CvGuide/>

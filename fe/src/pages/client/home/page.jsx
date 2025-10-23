@@ -6,13 +6,13 @@ import Topjob from "./top.job";
 
 const Home_page = () => {
   return (
-    <div className="max-w-6xl mx-auto">
+    <>
     <Banner/>
     <FilterBar/>
     <Jobs/>
     <Suggestjob/>
     <Topjob/>
-    </div>
+    </>
   );
 };
 

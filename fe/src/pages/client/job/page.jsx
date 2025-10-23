@@ -11,7 +11,7 @@ const Job_page = () => {
   const tags = ["Chuyên môn Frontend Developer", "IT - Phần mềm"];
 
   return (
-    <div className="max-w-6xl mx-auto my-5">
+    <div className="my-5">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Company info: 1 phần */}
         <div className="bg-white dark:bg-slate-900 rounded-lg shadow md:col-span-2">

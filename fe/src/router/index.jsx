@@ -7,7 +7,8 @@ import Login from "@/pages/auth/auth.login";
 import Register from "@/pages/auth/auth.register";
 import SaveJobsPage from "@/pages/client/saveJobs/page.jsx";
 import HistoryJobsPage from "@/pages/client/historyJobs/page.jsx";
-import TemplateCv_page from "../pages/client/Cv_template/page";
+import TemplateCv_page from "@/pages/client/CV/Cv_template/page";
+import CvEditor_page from "@/pages/client/CV/Cv_editor/page";
 
 const Router = () => {
   return (
@@ -25,6 +26,9 @@ const Router = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
         </Route>
+
+        {/* editor cv */}
+        <Route path="/cv/editor" element={<CvEditor_page/>}/>
 
         {/* dashboard */}
         <Route path="/dashboard" element={<Layout_dashboard />} />

@@ -70,7 +70,7 @@ export default function Banner() {
         </div>
 
         {/* Tìm kiếm nhiều */}
-        <div className="bg-white dark:bg-slate-900 rounded-lg shadow p-4 col-span-2 text-slate-800 dark:text-slate-100">
+        <div className="bg-white dark:bg-slate-900 rounded-lg shadow p-4 col-span-2 text-slate-800 dark:text-slate-100 overflow-hidden">
           <h3 className="font-semibold mb-3">Được tìm kiếm nhiều</h3>
           <div className="flex flex-wrap gap-2 mb-6">
             {hotSearch.map((job, idx) => (

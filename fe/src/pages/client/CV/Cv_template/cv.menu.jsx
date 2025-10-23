@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 export default function CvTemplateMenu() {
   const categories = [
     "Tất cả",
@@ -12,19 +14,29 @@ export default function CvTemplateMenu() {
   return (
     <>
       {/* Left Section */}
-      <div>
-        <h1 className="text-2xl font-bold text-slate-800 dark:text-slate-100">
-          Mẫu CV xin việc tiếng Việt chuẩn 2025
-        </h1>
-        <p className="text-slate-600 dark:text-slate-400 mt-1">
-          Tuyển chọn 71 mẫu CV đa dạng phong cách, giúp bạn tạo dấu ấn cá nhân
-          và kết nối mạnh mẽ hơn với nhà tuyển dụng.
-        </p>
+      <div className="flex justify-between">
+        <dv>
+          <h1 className="text-2xl font-bold text-slate-800 dark:text-slate-100">
+            Mẫu CV xin việc tiếng Việt chuẩn 2025
+          </h1>
+          <p className="text-slate-600 dark:text-slate-400 mt-1">
+            Tuyển chọn 71 mẫu CV đa dạng phong cách, giúp bạn tạo dấu ấn cá nhân
+            và kết nối mạnh mẽ hơn với nhà tuyển dụng.
+          </p>
+        </dv>
+
+        {/* btn create */}
+        <div className="hidden xl:block">
+        <Link to='/cv/editor'
+         className="bg-green-600 text-white border-green-600 p-2 rounded-lg">
+          Tạo CV ngay
+        </Link>
+        </div>
       </div>
 
       {/* Filter Bar */}
       <div className="flex flex-wrap items-center gap-3 mt-6">
-        {categories.map((cat, idx) => (
+        {categories?.map((cat, idx) => (
           <button
             key={idx}
             className={`px-5 py-2 rounded-full border text-sm font-medium transition-all duration-200 ${
@@ -39,9 +51,11 @@ export default function CvTemplateMenu() {
 
         {/* Language Dropdown */}
         <div className="ml-auto">
-          <button className="flex items-center gap-2 border rounded-full px-4 py-2 text-sm font-medium 
+          <button
+            className="flex items-center gap-2 border rounded-full px-4 py-2 text-sm font-medium 
           text-slate-700 dark:text-slate-200 border-slate-300 dark:border-slate-600 
-          hover:bg-slate-100 dark:hover:bg-slate-800 transition-all cursor-pointer">
+          hover:bg-slate-100 dark:hover:bg-slate-800 transition-all cursor-pointer"
+          >
             <span className="text-red-500 text-lg">★</span> Tiếng Việt ▾
           </button>
         </div>
