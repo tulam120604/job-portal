@@ -1,6 +1,6 @@
 import React, { memo } from "react";
 
-const EditField_component = memo(function EditableField({
+const InputField = memo(function EditableField({
   label,
   value,
   onChange,
@@ -20,10 +20,37 @@ const EditField_component = memo(function EditableField({
         value={value}
         placeholder={placeholder}
         onChange={(e) => onChange(e.target.value)}
-        className={`border border-gray-300 dark:border-gray-600 rounded-md p-2 bg-transparent text-sm outline-none focus:ring-1 focus:ring-blue-500 ${className}`}
+        className={`${className}`}
       />
     </div>
   );
 });
 
-export default EditField_component;
+const TextareaField = memo(function EditableField({
+  label,
+  value,
+  onChange,
+  type = "text",
+  placeholder = "",
+  className = "",
+}) {
+  return (
+    <div className="flex flex-col gap-1">
+      {label && (
+        <label className="text-sm text-gray-500 dark:text-gray-300">
+          {label}
+        </label>
+      )}
+      <textarea
+        type={type}
+        value={value}
+        rows={1}
+        placeholder={placeholder}
+        onChange={(e) => onChange(e.target.value)}
+        className={`${className}`}
+      />
+    </div>
+  );
+});
+
+export { TextareaField, InputField };
