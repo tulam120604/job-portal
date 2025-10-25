@@ -2,7 +2,7 @@
 export default function CVBuilder() {
   return (
     <div
-      className="bg-white dark:bg-slate-900 shadow-lg rounded-lg p-8 text-slate-800 dark:text-slate-100 max-w-3xl mx-auto border border-slate-200 dark:border-slate-800"
+      className="bg-white dark:bg-slate-900 p-8 text-slate-800 dark:text-slate-100 max-w-3xl mx-auto border border-slate-200 dark:border-slate-800"
       style={{ borderTop: `6px solid` }}
     >
       {/* Thông tin cá nhân */}

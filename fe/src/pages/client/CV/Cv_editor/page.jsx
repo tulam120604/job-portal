@@ -9,7 +9,7 @@ const CvEditor_page = () => {
       <Header_client />
       <div className="flex flex-col xl:flex-row my-5 sticky top-22 min-h-[80vh]">
         <CvEditorSidebar />
-        <div className="flex mx-auto">
+        <div className="flex mx-auto shadow-lg rounded-lg overflow-hidden">
           <CVBuilder />
           <CVEditor />
         </div>
