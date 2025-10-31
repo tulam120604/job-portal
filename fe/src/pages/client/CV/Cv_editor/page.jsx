@@ -1,17 +1,21 @@
 import Header_client from "../../../../components/header";
 import CvEditorSidebar from "../components/cv.editorSidebar";
-import CVBuilder from "./cv.builder";
 import CVEditor from "./cv.editor";
+import Preview from "./cv.preview";
 
 const CvEditor_page = () => {
   return (
-    <div>
+    <div className="pb-4">
       <Header_client />
-      <div className="flex flex-col xl:flex-row my-5 sticky top-22 min-h-[80vh]">
+      <div className="w-full sticky top-[65px] z-[1000] bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-100 
+      flex justify-end pr-4">
+        <Preview/>
+      </div>
+      <div className="flex flex-col xl:flex-row mt-5 top-22 min-h-[80vh]">
         <CvEditorSidebar />
-        <div className="flex mx-auto shadow-lg rounded-lg overflow-hidden">
-          <CVBuilder />
-          <CVEditor />
+        <div className="flex mx-auto ">
+          {/* <CVBuilder /> */}
+          <CVEditor />  
         </div>
       </div>
     </div>

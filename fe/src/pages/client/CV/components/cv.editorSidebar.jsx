@@ -48,7 +48,8 @@ const CvEditorSidebar = () => {
   };
 
   return (
-    <div className="flex min-h-[80vh] gap-x-2 border-r border-gray-200 *:bg-white *:dark:bg-gray-900 dark:border-gray-700 *:rounded">
+    <div className="flex h-[80vh] gap-x-2 border-r border-gray-200 *:bg-white *:dark:bg-gray-900 
+    dark:border-gray-700 *:rounded sticky top-[110px]">
       {/* Tab List */}
       <div>
         <div className="flex w-[200px] flex-col space-y-1 dark:border-gray-700">
