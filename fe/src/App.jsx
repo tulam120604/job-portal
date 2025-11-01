@@ -8,7 +8,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <GoogleOAuthProvider clientId={import.meta.env.VITE_GG_CLIENT_ID || ''}>
-        <main className="bg-white dark:bg-black min-h-screen font-sans">
+        <main className="bg-gray-100 dark:bg-black min-h-screen font-sans">
           <Router />
         </main>
       </GoogleOAuthProvider>

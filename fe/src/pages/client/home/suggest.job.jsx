@@ -7,7 +7,7 @@ const Suggestjob = () => {
         Gợi ý việc làm phù hợp
       </h2>
       <div
-        className="*:bg-slate-50 *:dark:bg-slate-900 grid grid-cols-1 
+        className="*:bg-white *:dark:bg-slate-900 grid grid-cols-1 
         md:grid-cols-2 gap-4 *:rounded-lg *:p-4"
       >
         {Array.from({ length: 10 }).map(() => (

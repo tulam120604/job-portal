@@ -7,7 +7,7 @@ const Topjob = () => {
         Top ngành nghề nổi bật
       </h2>
       <div
-        className="*:bg-slate-50 *:dark:bg-slate-900 grid grid-cols-1 
+        className="*:bg-white *:dark:bg-slate-900 grid grid-cols-1 
         md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 *:rounded-lg *:p-4"
       >
         {Array.from({ length: 10 }).map(() => (
