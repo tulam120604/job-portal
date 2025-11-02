@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router";
 import Layout_client from "@/layouts/client";
 import Layout_dashboard from "@/layouts/dashboard";
-import Home_page from '@/pages/client/home/page.jsx'
+import Home_page from "@/pages/client/home/page.jsx";
 import Job_page from "@/pages/client/job/page.jsx";
 import Login from "@/pages/auth/auth.login";
 import Register from "@/pages/auth/auth.register";
@@ -20,7 +20,10 @@ const Router = () => {
           <Route path="/job" element={<Job_page />} />
           <Route path="/savejob" element={<SaveJobsPage />} />
           <Route path="/historyjob" element={<HistoryJobsPage />} />
-          <Route path="/cv/template" element={<TemplateCv_page/>}/>
+          <Route path="/cv/template" element={<TemplateCv_page />} />
+
+          {/* cv editor */}
+          <Route path="/cv/editor" element={<CvEditor_page />} />
 
           {/* auth */}
           <Route path="/login" element={<Login />} />
@@ -28,7 +31,7 @@ const Router = () => {
         </Route>
 
         {/* editor cv */}
-        <Route path="/cv/editor" element={<CvEditor_page/>}/>
+        {/* <Route path="/cv/editor" element={<CvEditor_page/>}/> */}
 
         {/* dashboard */}
         <Route path="/dashboard" element={<Layout_dashboard />} />

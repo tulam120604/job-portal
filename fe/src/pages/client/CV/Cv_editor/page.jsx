@@ -1,23 +1,13 @@
-import Header_client from "../../../../components/header";
-import CvEditorSidebar from "../components/cv.editorSidebar";
 import CVEditor from "./cv..editor";
-import CVAction from "./cv.action";
-import CVPreview from "./cv.preview";
+import CVCompletionCard from "./cv.completioncard";
 
 const CvEditor_page = () => {
   return (
-    <div className="pb-4">
-      <Header_client />
-      <div className="w-full sticky top-[65px] z-[1000] bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-100 
-      flex justify-end pr-4">
-        <CVAction/>
-      </div>
-      <div className="flex flex-col xl:flex-row mt-5 top-22 min-h-[80vh]">
-        <CvEditorSidebar />
-        <div className="flex mx-auto ">
-          {/* <CVBuilder /> */}
-          <CVEditor />  
-        </div>
+    <div className="flex flex-col xl:flex-row top-20 min-h-[80vh] gap-x-4">
+      {/* <CVBuilder /> */}
+      <CVEditor />
+      <div>
+        <CVCompletionCard />
       </div>
     </div>
   );

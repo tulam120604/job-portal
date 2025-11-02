@@ -2,7 +2,7 @@ import { User, Mail, Phone, Calendar, MapPin, Plus, Edit, Briefcase, BookOpen, A
 
 export default function CVEditor() {
   return (
-    <div className="mx-auto lg:w-[50vw] min-h-screen flex justify-center">
+    <div className="mx-auto w-full min-h-screen flex justify-center mt-4">
       <div className="w-full">
         {/* Header */}
         <div className="flex items-start gap-4 p-6 bg-white dark:bg-gray-900 
