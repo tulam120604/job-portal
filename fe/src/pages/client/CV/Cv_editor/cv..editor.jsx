@@ -1,4 +1,6 @@
 import { User, Mail, Phone, Calendar, MapPin, Plus, Edit, Briefcase, BookOpen, Award, Languages, Projector, Star } from "lucide-react";
+import Aboutme_modal from "../components/aboutme.modal";
+import EducationModal from "../components/education.modal";
 
 export default function CVEditor() {
   return (
@@ -40,8 +42,8 @@ export default function CVEditor() {
 
         {/* Sections */}
         <div className="space-y-3 mt-3">
-          <Section title="Giới thiệu bản thân" desc="Giới thiệu điểm mạnh và số năm kinh nghiệm của bạn" icon={<User />} />
-          <Section title="Học vấn" desc="Chia sẻ học vấn của bạn" icon={<BookOpen />} />
+          <Aboutme_modal title="Giới thiệu bản thân" desc="Giới thiệu điểm mạnh và số năm kinh nghiệm của bạn" icon={<User />} />
+          <EducationModal title="Học vấn" desc="Chia sẻ học vấn của bạn" icon={<BookOpen />} />
           <Section title="Kinh nghiệm làm việc" desc="Chia sẻ những thông tin về quá trình làm việc của bạn" icon={<Briefcase />} />
           <Section title="Kĩ năng" desc="Liệt kê các kĩ năng của bạn" icon={<Star />} />
           <Section title="Ngoại ngữ" desc="Liệt kê các ngôn ngữ mà bạn biết" icon={<Languages />} />
@@ -50,14 +52,15 @@ export default function CVEditor() {
           <Section title="Giải thưởng" desc="Thể hiện giải thưởng hoặc thành tích mà bạn đạt được" icon={<Award />} />
         </div>
       </div>
+
     </div>
   );
 }
 
 function Section({ title, desc, icon }) {
   return (
-    <div className="flex items-center justify-between bg-white dark:bg-gray-900 
-    rounded-lg px-4 py-3 hover:shadow transition text-gray-700 dark:text-gray-300">
+    <div className="flex items-center justify-between bg-white dark:bg-gray-900 rounded-lg 
+    px-4 py-3 hover:shadow transition text-gray-700 dark:text-gray-300 cursor-pointer">
       <div className="flex items-center gap-3">
         <div className="text-rose-300">{icon}</div>
         <div>
@@ -65,7 +68,7 @@ function Section({ title, desc, icon }) {
           <p className="text-sm opacity-85">{desc}</p>
         </div>
       </div>
-      <button className="text-rose-400 hover:text-rose-600 cursor-pointer">
+      <button className="text-rose-400 hover:text-rose-600">
         <Plus size={18} />
       </button>
     </div>
