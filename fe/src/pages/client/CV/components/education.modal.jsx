@@ -24,10 +24,10 @@ export default function EducationModal({ title, desc, icon }) {
 
       {/* modal */}
       {open && (
-        <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50 sideDown">
+        <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
           <div
             className="bg-white dark:bg-gray-900 rounded-lg text-gray-700 
-      dark:text-gray-300 w-[900px] shadow-lg overflow-hidden"
+      dark:text-gray-300 w-[900px] shadow-lg overflow-hidden sideDown"
           >
             {/* Header */}
             <div className="flex justify-between items-center p-6">
@@ -60,8 +60,10 @@ export default function EducationModal({ title, desc, icon }) {
                   <label className="block font-medium mb-1">
                     Trình độ <span className="text-red-500">*</span>
                   </label>
-                  <select className="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 cursor-pointer 
-                  focus:ring-rose-400 bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-300">
+                  <select
+                    className="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 cursor-pointer 
+                  focus:ring-rose-400 bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-300"
+                  >
                     <option value="">Chọn trình độ</option>
                     <option value="daihoc">Đại học</option>
                     <option value="caodang">Cao đẳng</option>
@@ -91,36 +93,52 @@ export default function EducationModal({ title, desc, icon }) {
 
               {/* Thời gian học */}
               <div>
-                <label className="block font-medium mb-1">
-                  Từ <span className="text-red-500">*</span>
-                </label>
-                <div className="grid grid-cols-4 gap-4 *:cursor-pointer *:bg-white 
-                *:dark:bg-gray-900 *:text-gray-700 *:dark:text-gray-300">
-                  <select className="border rounded-md px-3 py-2">
-                    <option>Tháng</option>
-                    {Array.from({ length: 12 }, (_, i) => (
-                      <option key={i}>{i + 1}</option>
-                    ))}
-                  </select>
-                  <select className="border rounded-md px-3 py-2">
-                    <option>Năm</option>
-                    {Array.from({ length: 30 }, (_, i) => (
-                      <option key={i}>{2025 - i}</option>
-                    ))}
-                  </select>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <label className="block font-medium mb-1">
+                      Từ <span className="text-red-500">*</span>
+                    </label>
+                    <div
+                      className="grid grid-cols-2 gap-x-4 items-center *:bg-white *:dark:bg-gray-900 
+                      *:text-gray-700 *:dark:text-gray-300 *:cursor-pointer"
+                    >
+                      <select className="border rounded-md px-3 py-2">
+                        <option>Tháng</option>
+                        {Array.from({ length: 12 }, (_, i) => (
+                          <option key={i}>{i + 1}</option>
+                        ))}
+                      </select>
+                      <select className="border rounded-md px-3 py-2">
+                        <option>Năm</option>
+                        {Array.from({ length: 30 }, (_, i) => (
+                          <option key={i}>{2025 - i}</option>
+                        ))}
+                      </select>
+                    </div>
+                  </div>
 
-                  <select className="border rounded-md px-3 py-2">
-                    <option>Tháng</option>
-                    {Array.from({ length: 12 }, (_, i) => (
-                      <option key={i}>{i + 1}</option>
-                    ))}
-                  </select>
-                  <select className="border rounded-md px-3 py-2">
-                    <option>Năm</option>
-                    {Array.from({ length: 30 }, (_, i) => (
-                      <option key={i}>{2025 - i}</option>
-                    ))}
-                  </select>
+                  <div>
+                    <label className="block font-medium mb-1">
+                      Đến <span className="text-red-500">*</span>
+                    </label>
+                    <div
+                      className="grid grid-cols-2 gap-x-4 items-center *:bg-white *:dark:bg-gray-900 
+                      *:text-gray-700 *:dark:text-gray-300 *:cursor-pointer"
+                    >
+                      <select className="border rounded-md px-3 py-2">
+                        <option>Tháng</option>
+                        {Array.from({ length: 12 }, (_, i) => (
+                          <option key={i}>{i + 1}</option>
+                        ))}
+                      </select>
+                      <select className="border rounded-md px-3 py-2">
+                        <option>Năm</option>
+                        {Array.from({ length: 30 }, (_, i) => (
+                          <option key={i}>{2025 - i}</option>
+                        ))}
+                      </select>
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -139,11 +157,14 @@ export default function EducationModal({ title, desc, icon }) {
 
             {/* Footer */}
             <div className="flex justify-end gap-3 p-4 *:duration-200">
-              <button onClick={() => setOpen(pre => !pre)}
-              className="px-5 py-2 rounded-md hover:opacity-70 cursor-pointer">
+              <button
+                onClick={() => setOpen((pre) => !pre)}
+                className="px-5 py-2 rounded-md hover:opacity-70 cursor-pointer"
+              >
                 Hủy
               </button>
-              <button onClick={() => setOpen(pre => !pre)}
+              <button
+                onClick={() => setOpen((pre) => !pre)}
                 className="px-6 py-2 rounded-md bg-rose-500 text-white font-semibold 
           hover:bg-rose-600 hover:opacity-70 cursor-pointer"
               >

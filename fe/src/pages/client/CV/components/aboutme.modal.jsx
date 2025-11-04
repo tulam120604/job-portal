@@ -24,10 +24,10 @@ export default function Aboutme_modal({ title, desc, icon }) {
 
       {/* modal */}
       {open && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black/60 z-50 sideDown">
+        <div className="fixed inset-0 flex items-center justify-center bg-black/60 z-50">
           <div
             className="bg-white dark:bg-gray-900 rounded-lg text-gray-700 
-      dark:text-gray-300 w-[700px] shadow-lg overflow-hidden"
+      dark:text-gray-300 w-[700px] shadow-lg overflow-hidden sideDown"
           >
             {/* Header */}
             <div className="flex justify-between items-center p-5">
