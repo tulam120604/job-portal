@@ -2,6 +2,8 @@ import { User, Mail, Phone, Calendar, MapPin, Plus, Edit, Briefcase, BookOpen, A
 import Aboutme_modal from "../components/aboutme.modal";
 import EducationModal from "../components/education.modal";
 import WorkExperienceModal from "../components/workexperience.modal";
+import Skill_modal from "../components/skill.modal";
+import LanguageModal from "../components/language.modal";
 
 export default function CVEditor() {
   return (
@@ -46,8 +48,8 @@ export default function CVEditor() {
           <Aboutme_modal title="Giới thiệu bản thân" desc="Giới thiệu điểm mạnh và số năm kinh nghiệm của bạn" icon={<User />} />
           <EducationModal title="Học vấn" desc="Chia sẻ học vấn của bạn" icon={<BookOpen />} />
           <WorkExperienceModal title="Kinh nghiệm làm việc" desc="Chia sẻ những thông tin về quá trình làm việc của bạn" icon={<Briefcase />} />
-          <Section title="Kĩ năng" desc="Liệt kê các kĩ năng của bạn" icon={<Star />} />
-          <Section title="Ngoại ngữ" desc="Liệt kê các ngôn ngữ mà bạn biết" icon={<Languages />} />
+          <Skill_modal title="Kĩ năng" desc="Liệt kê các kĩ năng của bạn" icon={<Star />} />
+          <LanguageModal title="Ngoại ngữ" desc="Liệt kê các ngôn ngữ mà bạn biết" icon={<Languages />} />
           <Section title="Dự án nổi bật" desc="Giới thiệu dự án nổi bật của bạn" icon={<Projector />} />
           <Section title="Chứng chỉ" desc="Bổ sung chứng chỉ liên quan đến kỹ năng của bạn" icon={<Award />} />
           <Section title="Giải thưởng" desc="Thể hiện giải thưởng hoặc thành tích mà bạn đạt được" icon={<Award />} />
